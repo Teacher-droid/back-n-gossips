@@ -1,0 +1,67 @@
+
+
+<center>
+<div class="card" style="margin: 90px 250px; padding: 25px 0 25px 0; border: 1px solid lightgrey; border-radius: 30px">
+  <div class="card-header text-center">
+  <div class="panel panel-success class">
+  <% if @gossip.user %>
+        <div class="panel-heading">
+          Cet article a été écrit par <b><%= @gossip.user.first_name %> : 
+          <%= link_to "plus d'infos sur l'auteur", user_path() %></b>
+        </div>
+    </div>
+    </div>
+  
+
+    <div class="card-body">
+      <h5 class="card-title"><%= @gossip.title %></h5>
+      <p class="card-text">"<%= @gossip.content %>"</p>
+  <% end %>
+  
+    
+    <%= link_to "Ecrire un commentaire", new_gossip_comment_path(@gossip.id) %>
+
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row bootstrap snippets bootdeys">
+    <div>
+      <div class="comment-wrapper">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            Liste des commentaires 
+          </div>
+                
+          <div class="panel-body">
+            <div class="card my-1"> 
+              <div class="card-body">
+
+              
+              
+
+              </div>
+            </div>
+            <br>
+            <br>
+
+            <ul class="media-list"></ul>
+              
+                           
+              
+                       
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<a class="btn btn-primary" href='<%= gossips_path %>'>Retour à l'acceuil</a>
+</center>
+
+

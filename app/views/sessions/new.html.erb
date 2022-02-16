@@ -1,0 +1,40 @@
+
+
+
+
+<% if flash.any? %> 
+  <% flash.each do |type, msg| %> 
+    <div class="alert alert-<%= type %>"> 
+    <%= msg %> 
+    </div> 
+  <% end %> 
+<% end %>
+
+
+
+<center>
+<div class="login-main-text" style="margin-top: 150px">
+   <h2><strong>Connexion</strong></h2>
+   </br>
+</div>
+<div class="main">
+   <div class="login-form">
+      <div class="form-group">
+         <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+         <%= label_tag 'E-mail' %>
+         <br/>
+         <%= text_field_tag 'email' %>
+         <br /> <br />
+
+         <%= label_tag 'Mot de passe' %>
+         <br/>
+         <%= password_field_tag 'password' %>
+         <br /> <br />
+         <%= submit_tag "Se connecter", class: "btn btn-primary", style: "margin-top: 25px" %>
+         <% end %>
+      </div>
+   </div>
+</div>
+</center>
+     

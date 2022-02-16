@@ -1,0 +1,63 @@
+<html>
+
+
+<% if flash.any? %> 
+  <% flash.each do |type, msg| %> 
+    <div class="alert alert-<%= type %>"> 
+    <%= msg %> 
+    </div> 
+  <% end %> 
+<% end %>
+
+
+
+
+
+  <head>
+    <title> Gossip News </title>
+  </head>
+
+<body>
+      <center>
+  <div class="jumbotron"> 
+    <div class="container">
+      <div class=fond>
+        <h1> Welcome ladies !<br> Voici les potins de THP </h1> 
+        <p> Ici pour votre plus grand malheur, l'actualité des on-dit de THP, enjoy & bon comérage !</p>
+        </br>
+        </br>
+        <p><a class="btn btn-primary btn-lg" href='<%= new_gossip_path %>' role="button"> Crée ton potin</a>
+        </center>
+      </div>
+    </div>
+  </div>
+<center>
+  <div class="row" style="width: 85%">
+    <% puts @gossips %>
+    <% @gossips.each do |gossip| %>
+      <% if gossip.user %>
+      <div class="col-sm-6">
+        <div class="card" style="margin: 10px; padding: 25px 0 25px 0; border: 2.5px solid lightgrey; border-radius: 50px">
+          <div class="card-header">
+            <h3><%= gossip.title %></h3>
+          </div>
+          <div class="card-body">
+            <h4><%= gossip.content %>
+            <h5 class="card-title">A été écrit par <%= gossip.user.first_name  %></h5>
+            <% end %>
+            </br>
+            <a class="btn btn-success" href="<%= gossip_path(gossip.id) %>">En savoir plus...</a>
+            <%= link_to "Editer", edit_gossip_path(gossip.id), class:"btn btn-warning" %>
+            </br>
+            </br>
+            <%= button_to "Supprimer", gossip, method: :delete, data: { confirm: "Tu es sur ?" }, class: "btn btn-danger" %>
+          </div>
+        </div>
+      </div> 
+    <% end %>          
+  </div> 
+ 
+ </center>   
+</body>
+</html> 
+

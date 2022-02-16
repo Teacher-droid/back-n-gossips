@@ -1,0 +1,20 @@
+<center>
+<div class="card create-potin">
+  <div class="card-header">
+    <h2>Commenter le gossip</h2>
+  </div>
+  <div class="card-body" >
+      <%= form_tag url_for(action: :create), method: "post" do %>
+        <%= label_tag 'Description de ton potin' %>
+        <br/>
+        <%= text_area_tag 'content' %>
+        <br /> <br />
+
+        <%= submit_tag  "Commenter", class: 'btn btn-primary' %>
+      <% end %>
+  
+    
+  </div>
+</div>
+</center>
+

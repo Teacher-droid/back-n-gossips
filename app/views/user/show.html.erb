@@ -1,0 +1,125 @@
+
+
+<div class="container text-center">    
+  <div class="row">
+    <div class="col-sm-3 well">
+      <div class="well">
+        <p><strong><%= @user.last_name %> <%= @user.first_name %></strong></p></br>
+        <img src="https://cdn.pixabay.com/photo/2017/02/25/22/04/user-icon-2098873_960_720.png" class="img-circle" height="65" width="65" alt="Avatar">
+        </br></br>
+        <p><strong>Contact</strong> : <%= @user.email %></p>
+        <p><strong>Age</strong> : <%= @user.age %></p>
+      </div>
+      <div class="well">
+        <p><strong>Intérêts</strong></p>
+        <p>
+          <span class="label label-default">THP</span>
+          <span class="label label-primary">truestory</span>
+          <span class="label label-success">Buzz</span>
+          <span class="label label-info">TVreality</span>
+          <span class="label label-warning">ChuckBoris</span>
+        </p>
+      </div>
+      <div class="alert alert-success fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <p><strong>Hey !</strong></p>
+        Des gens ont visité ton profil !
+      </div>
+      <p><strong> Affiche tes liens içi :</strong></p>
+      <p><a href="#">Monblogdecommere.tuconnais.viens</a></p>
+      <p><a href="#">THPestmagique.pourquoi.pourquoipas</a></p>
+      <p><a href="#">ChuckBoris.histoire.incroyable</a></p>
+    </div>
+    <div class="col-sm-7">
+    
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default text-left">
+            <div class="panel-body">
+              <p contenteditable="true">Status: Feeling Blue</p>
+              <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Like
+              </button>     
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Auteur</p>
+           
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Futur Potin</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Auteur</p>
+           
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Futur Potin</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Auteur</p>
+           
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Futur Potin</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Auteur</p>
+           
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Futur Potin</p>
+          </div>
+        </div>
+      </div>     
+    </div>
+    <div class="col-sm-2 well">
+      <div class="thumbnail">
+        <p><strong>Originaire de :</strong></p>
+        
+        <p><strong> <%= @user.city %> </strong></p>
+        <%= link_to "Info", city_path(), class: "btn btn-primary" %> 
+      </div>      
+      <div class="well">
+        <p></p>
+      </div>
+      <div class="well">
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p></p>
+</footer>
+
+</body>
+</html>
+
+

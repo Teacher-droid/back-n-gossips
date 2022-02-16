@@ -1,0 +1,39 @@
+// Place all the styles related to the gossips controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    background-color: black ;
+  }
+  
+  .date {
+    font-size: 11px;
+  }
+  
+  .comment-text {
+    font-size: 12px;
+  }
+  
+  .fs-12 {
+    font-size: 12px;
+  }
+  
+  .shadow-none {
+    box-shadow: none;
+  }
+  
+  .name {
+    color: #007bff;
+  }
+  
+  .cursor:hover {
+    color: blue;
+  }
+  
+  .cursor {
+    cursor: pointer
+  }
+  
+  .textarea {
+    resize: none
+  }

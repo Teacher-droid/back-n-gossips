@@ -1,0 +1,64 @@
+<% if flash.any? %> 
+  <% flash.each do |type, msg| %> 
+    <div class="alert alert-<%= type %>"> 
+    <%= msg %> 
+    </div> 
+  <% end %> 
+<% end %>
+
+
+
+<center>
+  <div class="card create-potin">
+  <div class="card-header">
+    <h2>Création d'un utilisateur</h2>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <%= form_tag url_for(action: 'create'), method: "post" do %>
+        <%= label_tag 'Nom' %>
+        <br />
+        <%= text_field_tag 'last_name' %>
+        <br /> <br />
+
+        <%= label_tag 'Prénom' %>
+        <br />
+        <%= text_field_tag 'first_name' %>
+        <br /> <br />
+
+        <%= label_tag 'Ville' %>
+        <br />
+        <%= text_field_tag '@ville' %>
+        <br /> <br />
+
+        <%= label_tag 'Une description de toi' %>
+        <br />
+        <%= text_area_tag 'description' %>
+        <br /> <br />
+
+        <%= label_tag 'E-mail' %>
+        <br />
+        <%= text_field_tag 'email' %>
+        <br /> <br />
+
+        <%= label_tag 'Age' %>
+        <br />
+        <%= text_field_tag 'age' %>
+        <br /> <br />
+
+        <%= label_tag 'Entre ton mot de passe' %>
+        <br />
+        <%= password_field_tag 'pass_first' %>
+        <br /> <br />
+
+        <%= label_tag 'Confirme ton mot de passe' %>
+        <br />
+        <%= password_field_tag 'pass_second' %>
+        <br /> <br />
+
+        <%= submit_tag "Créer mon profil", class: 'btn btn-primary' %>
+      <% end %>
+    </blockquote>
+  </div>
+</div>
+</center>
