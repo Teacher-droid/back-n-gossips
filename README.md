@@ -1,12 +1,13 @@
-# README
+# README 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 
-## Process by following
+## Process by following ⚙️
 
 	  `bundle install`
+- Then `rake db:reset`
 - Then `rails db:create`
 - Then `rails db:migrate`
 - Check the migration's state : `rails db:migrate:status`
@@ -17,27 +18,27 @@ application up and running.
 <hr>
 
 
-Things you may want to cover:
+Things you may want to cover 📝
 
 * Ruby version
  Ruby 2.7.4p191 ©
 
 * System dependencies
  Using Bundler and brew:
- install bundle && brew bundle
+ `install bundle && brew bundle`
 
 * Configuration
  Rails 5.2.6.2 ©
 
 
 * Database creation
- rails db:create
+ `rails db:create`
 
 * Database initialization
- rails db:create db:migrate db:seed
+ `rails db:create db:migrate db:seed`
 
 * How to run the test suite
- rails db:seed
+ `rails db:seed`
 
 * Services (job queues, cache servers, search engines, etc.)
 
@@ -48,3 +49,4 @@ Things you may want to cover:
     Debian 11
 
 https://www.ralfebert.com/tutorials/rails-deployment/
+
